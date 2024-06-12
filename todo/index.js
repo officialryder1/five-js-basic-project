@@ -65,15 +65,13 @@ window.addEventListener('DOMContentLoaded', loadTask)
 // Extra feature to try
 const hover = document.getElementById('hover')
 
-hover.addEventListener('mouseenter', function(){ 
-    const body = document.getElementsByTagName("body")[0]
-    body.style.backgroundColor = "purple"
-    hover.style.backgroundColor = "rgb(1, 13, 30)"
+hover.addEventListener('click', function(){ 
+    const body = document.getElementsByTagName('body')[0]
+    const red = Math.round(Math.random() * 255)
+    const green = Math.round(Math.random() * 255)
+    const blue = Math.round(Math.random() * 255)
+
+    const color = `rgb(${red}, ${green}, ${blue})`
+    body.style.backgroundColor = color
 })
 
-hover.addEventListener('mouseout', function(){
-    const body = document.getElementsByTagName("body")[0]
-    body.style.backgroundColor = "rgb(1, 13, 30)";
-    hover.style.backgroundColor = 'purple';
-    
-})
