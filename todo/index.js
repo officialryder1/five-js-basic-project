@@ -43,8 +43,6 @@ const addTask = () => {
         
     }
     
-    
-    
 }
 
 
@@ -56,9 +54,26 @@ const deleteTodo = (event) => {
 
 }
 
+
 // add EventListener
 addButton.addEventListener("click", addTask);
 todoList.addEventListener("click", deleteTodo)
 
 // Load tasks when the page is loaded
 window.addEventListener('DOMContentLoaded', loadTask)
+
+// Extra feature to try
+const hover = document.getElementById('hover')
+
+hover.addEventListener('mouseenter', function(){ 
+    const body = document.getElementsByTagName("body")[0]
+    body.style.backgroundColor = "purple"
+    hover.style.backgroundColor = "rgb(1, 13, 30)"
+})
+
+hover.addEventListener('mouseout', function(){
+    const body = document.getElementsByTagName("body")[0]
+    body.style.backgroundColor = "rgb(1, 13, 30)";
+    hover.style.backgroundColor = 'purple';
+    
+})
